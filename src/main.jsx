@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import StudentTable from './Components/StudentTable/StudentTable';
 import CreateStudent from './Components/CreateStudent/CreateStudent';
 import EditStudent from './Components/EditStudent/EditStudent';
-import Footer from "./Components/Footer/Footer"; 
+import Footer from "./Components/Footer/Footer";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -14,8 +14,8 @@ createRoot(document.getElementById("root")).render(
       <Navbar />
       <Routes>
         <Route path="/" element={<StudentTable />}></Route>
-        <Route path="student/create" element={<CreateStudent/>}></Route>
-        <Route path="student/edit/:id" element={<EditStudent/>}></Route>
+        <Route path="student/create" element={<CreateStudent />}></Route>
+        <Route path="student/edit/:id" element={<EditStudent />}></Route>
       </Routes>
       <Footer />
     </BrowserRouter>

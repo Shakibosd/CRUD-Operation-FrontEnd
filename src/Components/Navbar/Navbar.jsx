@@ -1,4 +1,3 @@
-import './Navbar.css';
 import { NavLink } from 'react-router-dom';
 import logo from "../../assets/images/icons8-crud-64.png";
 import navItems from './../../Data/Navbar/Navbars';
@@ -6,31 +5,61 @@ import navItems from './../../Data/Navbar/Navbars';
 const Navbar = () => {
     return (
         <div>
-            <nav className="navbar navbar-expand-lg bg-dark text-light">
-                <div className="container-fluid">
-                    <NavLink to={'/'} className="navbar-brand">
-                        <img className="img-fluid"
-                            style={{ width: '50px', height: '50px', borderRadius: '10px', backgroundColor: 'whitesmoke', padding: '4px' }}
+            <nav className="bg-gray-900 text-light p-4">
+                <div className="container mx-auto flex justify-between items-center">
+                    {/* Logo Section */}
+                    <NavLink to={'/'} className="flex items-center">
+                        <img
+                            className="w-12 h-12 rounded-lg bg-gray-100 p-1"
                             src={logo}
-                            alt="logo" />
+                            alt="logo"
+                        />
                     </NavLink>
-                    <button className="navbar-toggler bg-light text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
+
+                    {/* Mobile Toggle Button */}
+                    <button
+                        className="lg:hidden p-2 bg-gray-100 text-dark rounded focus:outline-none"
+                        type="button"
+                        aria-label="Toggle navigation"
+                    >
+                        <svg
+                            className="w-6 h-6"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="M4 6h16M4 12h16m-7 6h7"
+                            ></path>
+                        </svg>
                     </button>
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0"></ul>
-                        <form className="d-flex nav-er-items list-unstyled gap-5 fs-5" role="search">
-                            <li className="nav-item">
-                                <NavLink to={'/'} className="nav-link" aria-current="page"><b>Home</b></NavLink>
+
+                    {/* Nav Items */}
+                    <div className="hidden lg:flex lg:items-center lg:space-x-8">
+                        <ul className="flex space-x-8">
+                            <li>
+                                <NavLink
+                                    to={'/'}
+                                    className="text-white hover:text-gray-300 font-bold"
+                                >
+                                    Home
+                                </NavLink>
                             </li>
-                            {
-                                navItems.map((data) => (
-                                    <li key={data.id} className="nav-item">
-                                        <a to={data.link} className="nav-link"><b>{data.text}</b></a>
-                                    </li>
-                                ))
-                            }
-                        </form>
+                            {navItems.map((data) => (
+                                <li key={data.id}>
+                                    <NavLink
+                                        to={data.link}
+                                        className="text-white hover:text-gray-300 font-bold"
+                                    >
+                                        {data.text}
+                                    </NavLink>
+                                </li>
+                            ))}
+                        </ul>
                     </div>
                 </div>
             </nav>

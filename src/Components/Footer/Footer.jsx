@@ -1,45 +1,70 @@
-import footerItems from "../../Data/Footers/footerItems";  
-import footersIcons from "../../Data/Footers/footersIcons"; 
+import footerItems from "../../Data/Footers/footerItems";
+import footersIcons from "../../Data/Footers/footersIcons";
 
 const Footer = () => {
     return (
         <div>
-            <footer className="bg-dark text-light py-5">
-                <div className="p-3">
-                    <div className="row">
-                        <div className="col-md-4 text-center text-md-start">
-                            <h5><b>About Us</b></h5>
-                            <p>
+            <footer className="bg-gray-900 text-light py-12">
+                <div className="container mx-auto px-4">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {/* About Us Section */}
+                        <div className="text-center md:text-left">
+                            <h5 className="text-xl font-bold mb-4 text-white">About Us</h5>
+                            <p className="text-gray-300">
                                 We provide the best services to our customers. Follow us on social
                                 media to stay updated.
                             </p>
                         </div>
 
-                        <div className="col-md-4 text-center">
-                            <h5><b>Quick Links</b></h5>
-                            <ul className="list-unstyled">
-                                {
-                                    footerItems.map((data) =>
-                                        <li key={data.id}><a className="text-light text-decoration-none">{data.text}</a></li>
-                                    )
-                                }
+                        {/* Quick Links Section */}
+                        <div className="text-center">
+                            <h5 className="text-xl font-bold mb-4 text-white">Quick Links</h5>
+                            <ul className="space-y-2">
+                                {footerItems.map((data) => (
+                                    <li key={data.id}>
+                                        <a href="#" className="text-gray-300 hover:text-white transition duration-300">
+                                            {data.text}
+                                        </a>
+                                    </li>
+                                ))}
                             </ul>
                         </div>
 
-                        <div className="col-md-4 text-center text-md-end">
-                            <h5><b>Follow Us</b></h5>
-                            {
-                                footersIcons.map((data) =>
-                                    <a key={data.id} href={data.link} target='_blank' className="text-light me-2 fs-5"><i className={data.icon}></i></a>
-                                )   
-                            }
+                        {/* Follow Us Section */}
+                        <div className="text-center md:text-right">
+                            <h5 className="text-xl font-bold mb-4 text-white">Follow Us</h5>
+                            <div className="flex justify-center md:justify-end space-x-4">
+                                {footersIcons.map((data) => (
+                                    <a
+                                        key={data.id}
+                                        href={data.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-gray-300 hover:text-white transition duration-300 text-2xl"
+                                    >
+                                        <i className={data.icon}></i>
+                                    </a>
+                                ))}
+                            </div>
                         </div>
                     </div>
 
-                    <hr className="my-3 text-light" />
+                    {/* Divider */}
+                    <hr className="my-8 border-gray-500" />
 
+                    {/* Copyright Section */}
                     <div className="text-center">
-                        <p className="mb-0">&copy; {new Date().getFullYear()} All rights reserved. Developed With <a className='text-light' target='_blank' style={{ textDecoration: 'none' }} href="https://myprotfolios.netlify.app/"><b>Nazmus Sahkib</b></a></p>
+                        <p className="text-gray-300">
+                            &copy; {new Date().getFullYear()} All rights reserved. Developed With{" "}
+                            <a
+                                href="https://myprotfolios.netlify.app/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-white hover:underline font-bold"
+                            >
+                                Nazmus Sakib
+                            </a>
+                        </p>
                     </div>
                 </div>
             </footer>
