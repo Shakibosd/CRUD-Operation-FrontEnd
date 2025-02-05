@@ -5,7 +5,7 @@ const StudentTables = () => {
     const [students, setStudents] = useState([]);
 
     useEffect(() => {
-        fetch(`http://127.0.0.1:8000/Crud_Opt/plans-get/`, {
+        fetch(`https://crud-operation-backends.onrender.com/Crud_Opt/plans-get/`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -23,7 +23,7 @@ const StudentTables = () => {
 
     const deleteStudent = (id) => {
         if (window.confirm("Are You Sure You Want To Delete This Student?")) {
-            fetch(`http://127.0.0.1:8000/Crud_Opt/plans-delete/${id}/`, {
+            fetch(`https://crud-operation-backends.onrender.com/Crud_Opt/plans-delete/${id}/`, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json",

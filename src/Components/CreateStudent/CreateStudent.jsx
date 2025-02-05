@@ -20,7 +20,7 @@ const CreateStudent = () => {
         };
 
         try {
-            const response = await fetch('http://127.0.0.1:8000/Crud_Opt/plans-post/', {
+            const response = await fetch('https://crud-operation-backends.onrender.com/Crud_Opt/plans-post/', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

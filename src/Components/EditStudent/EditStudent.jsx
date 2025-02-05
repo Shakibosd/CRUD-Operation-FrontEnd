@@ -11,7 +11,7 @@ const EditStudent = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch(`http://127.0.0.1:8000/Crud_Opt/plans-put/${id}/`)
+        fetch(`https://crud-operation-backends.onrender.com/Crud_Opt/plans-put/${id}/`)
             .then((res) => res.json())
             .then((data) => {
                 setName(data.name);
@@ -27,7 +27,7 @@ const EditStudent = () => {
         e.preventDefault();
         const updateData = { name:editname, place:editplace, phone:editphone, email:editemail };
 
-        fetch(`http://127.0.0.1:8000/Crud_Opt/plans-put/${id}/`, {
+        fetch(`https://crud-operation-backends.onrender.com/Crud_Opt/plans-put/${id}/`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
