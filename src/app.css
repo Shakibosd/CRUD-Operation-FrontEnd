@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    cursor: pointer;
+}
+
+html{
+    scroll-behavior: smooth;
+}
