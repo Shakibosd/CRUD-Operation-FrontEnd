@@ -15,16 +15,16 @@ const StudentTables = () => {
         </Link>
         <div className="overflow-x-auto mt-6">
           <table className="min-w-full bg-white border border-gray-200">
-            <thead className="bg-gray-800 text-white">
+            <thead className="bg-gray-800 text-white text-center whitespace-nowrap">
               <tr>
-                <th className="py-1 px-1 text-left">SL.</th>
-                <th className="py-1 px-1 text-left">Name</th>
-                <th className="py-1 px-1 text-left">Place</th>
-                <th className="py-1 px-1 text-left">Phone</th>
-                <th className="py-1 px-1 text-left">Email</th>
-                <th className="py-1 px-1 text-left">Create At</th>
-                <th className="py-1 px-1 text-left">Update At</th>
-                <th className="py-1 px-1 text-left">Action</th>
+                <th className="py-5 px-5">SL.</th>
+                <th className="py-5 px-5">Name</th>
+                <th className="py-5 px-5">Place</th>
+                <th className="py-5 px-5">Phone</th>
+                <th className="py-5 px-5">Email</th>
+                <th className="py-5 px-5">Create At</th>
+                <th className="py-5 px-5">Update At</th>
+                <th className="py-5 px-5">Action</th>
               </tr>
             </thead>
             <tbody className="text-gray-700"></tbody>

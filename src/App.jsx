@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./app.css";
+import "./App.css";
 import { StrictMode } from "react";
 import StudentTable from "./Components/StudentTable/StudentTable";
 import CreateStudent from "./Components/CreateStudent/CreateStudent";
